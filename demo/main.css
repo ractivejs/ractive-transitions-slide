@@ -18,49 +18,6 @@ h1, h2 {
 	font-weight: normal;
 }
 
-.forkme {
-	position: fixed;
-	left: 3.5em;
-	top: 3.5em;
-	background-color: #888;
-	padding: 0.2em 0;
-	width: 15em;
-	text-align: center;
-	color: white;
-	-webkit-transform: translate(-50%,-50%) rotate(-45deg);
-	-moz-transform: translate(-50%,-50%) rotate(-45deg);
-	-ms-transform: translate(-50%,-50%) rotate(-45deg);
-	-o-transform: translate(-50%,-50%) rotate(-45deg);
-	transform: translate(-50%,-50%) rotate(-45deg);
-	font-family: Voltaire;
-	font-weight: bold;
-	box-shadow: 0 1px 4px rgba(0,0,0,0.4);
-	opacity: 0;
-	display: none;
-
-	-webkit-transition: opacity 0.5s;
-	-moz-transition: opacity 0.5s;
-	-ms-transition: opacity 0.5s;
-	-o-transition: opacity 0.5s;
-	transition: opacity 0.5s;
-}
-
-.transforms-enabled .forkme {
-	display: block;
-}
-
-.forkme:before, .forkme:after {
-	content: '';
-	display: block;
-	width: 100%;
-	border-top: 1px dashed white;
-}
-
-@media screen and (min-width: 56em) {
-	.forkme {
-		opacity: 1;
-	}
-}
 
 header {
 	line-height: 1;
@@ -99,19 +56,6 @@ code {
 	font-size: 0.8em;
 	padding: 0.15em 0.3em;
 	position: relative;
-}
-
-.github {
-	padding: 1em;
-	background-color: #f9f9f9;
-	border-top: 1px solid #f4f4f4;
-	border-bottom: 1px solid #f4f4f4;
-	height: 3em;
-	text-align: center;
-}
-
-.github > span {
-	display: block;
 }
 
 a {
@@ -194,4 +138,48 @@ footer {
 
 #demo {
 	position: relative;
+}
+
+.forkme {
+	position: fixed;
+	left: 3.5em;
+	top: 3.5em;
+	background-color: #888;
+	padding: 0.2em 0;
+	width: 15em;
+	text-align: center;
+	color: white;
+	-webkit-transform: translate(-50%,-50%) rotate(-45deg);
+	-moz-transform: translate(-50%,-50%) rotate(-45deg);
+	-ms-transform: translate(-50%,-50%) rotate(-45deg);
+	-o-transform: translate(-50%,-50%) rotate(-45deg);
+	transform: translate(-50%,-50%) rotate(-45deg);
+	font-family: Voltaire;
+	font-weight: bold;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+	opacity: 0;
+	display: none;
+
+	-webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	-ms-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.transforms-enabled .forkme {
+	display: block;
+}
+
+.forkme:before, .forkme:after {
+	content: '';
+	display: block;
+	width: 100%;
+	border-top: 1px dashed white;
+}
+
+@media screen and (min-width: 56em) {
+	.forkme {
+		opacity: 1;
+	}
 }
