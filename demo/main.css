@@ -140,7 +140,7 @@ footer {
 	position: relative;
 }
 
-.forkme {
+a.forkme {
 	position: fixed;
 	left: 3.5em;
 	top: 3.5em;
@@ -167,7 +167,7 @@ footer {
 	transition: opacity 0.5s;
 }
 
-.transforms-enabled .forkme {
+.transforms-enabled a.forkme {
 	display: block;
 }
 
@@ -179,7 +179,7 @@ footer {
 }
 
 @media screen and (min-width: 56em) {
-	.forkme {
+	a.forkme {
 		opacity: 1;
 	}
 }
