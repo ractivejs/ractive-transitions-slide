@@ -5,7 +5,8 @@
 
 	Version 0.1.0.
 
-	<< description goes here... >>
+	This transition slides an element in and out of view,
+	using CSS transitions where possible.
 
 	==========================
 
@@ -26,7 +27,13 @@
 	    // the return value
 	    require( 'Ractive-transitions-slide' );
 
-	<< more specific instructions for this plugin go here... >>
+	You can specify the `delay`, `duration` and `easing` properties
+	using the conventional syntax:
+
+	    <div intro='slide:{"delay":500,"easing":"ease-out"}'>content</div>
+
+	Both `delay` and `duration` are in milliseconds. The `easing` value
+	must be a valid CSS easing function (see http://cubic-bezier.com/).
 
 */
 
@@ -91,6 +98,7 @@
 			target = t.getStyle( props );
 			t.setStyle( collapsed );
 		} else {
+			t.setStyle( t.getStyle( props ) );
 			target = collapsed;
 		}
 
@@ -105,7 +113,9 @@
 			t.easing = 'easeInOut';
 		}
 
-		t.animateStyle( target );
+		setTimeout( function () {
+			t.animateStyle( target );
+		}, t.delay || 0 );
 	};
 
 	Ractive.transitions.slide = slide;

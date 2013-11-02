@@ -98,6 +98,8 @@
 			target = t.getStyle( props );
 			t.setStyle( collapsed );
 		} else {
+			// make style explicit, so we're not transitioning to 'auto'
+			t.setStyle( t.getStyle( props ) );
 			target = collapsed;
 		}
 

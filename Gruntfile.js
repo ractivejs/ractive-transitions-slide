@@ -16,7 +16,8 @@ module.exports = function ( grunt ) {
 					module: true,
 					require: true,
 					window: true,
-					document: true
+					document: true,
+					setTimeout: true
 				}
 			}
 		},
