@@ -21,29 +21,42 @@ h1, h2 {
 
 header {
 	line-height: 1;
-	border-bottom: 1px solid #eee;
-	margin: 0 0 2em 0;
-	padding: 0 0 1em 0;
+	margin: 0 0 1em 0;
 }
 
-/* clearfix */
-header:before,
-header:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+.strap:before,
+.strap:after {
+    content: ' ';
+    display: table;
 }
-header:after {
+.strap:after {
     clear: both;
 }
 
 header h1 {
 	display: inline-block;
-	margin: 0;
+	margin: 0 0 0.5em 0;
+}
+
+header p {
+	padding: 0;
+	margin: 0 0 2em 0;
+	padding: 0.5em 0.5em 0 0.5em;
+	background-color: rgb(249,252,246);
+	border-top: 1px solid rgba(0,0,0,0.05);
+	border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 header span {
+	margin: 0 0 0.5em 0;
+}
+
+header .download {
+	float: left;
+}
+
+header .more-plugins {
 	float: right;
-	padding: 1em 0 0 0;
 }
 
 code {
