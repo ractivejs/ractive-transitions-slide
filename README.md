@@ -5,6 +5,8 @@ Ractive.js slide transition plugin
 
 This transition slides an element in and out of view, using CSS transitions where possible.
 
+[See the demo here.](http://ractivejs.github.io/Ractive-transitions-slide/)
+
 Usage
 -----
 
