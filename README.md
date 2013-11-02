@@ -1,5 +1,5 @@
-Ractive-transitions-slide
-=========================
+Ractive.js slide transition plugin
+==================================
 
 *Find more Ractive.js plugins at [ractivejs.org/plugins](http://ractivejs.org/plugins)*
 
