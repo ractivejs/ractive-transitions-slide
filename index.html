@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang='en-GB'>
+<head>
+	<meta charset='utf-8'>
+	<title>Ractive-transitions-slide</title>
+
+	<!-- CSS -->
+	<link href='http://fonts.googleapis.com/css?family=Voltaire' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' href='demo/main.css'>
+	<link rel='stylesheet' href='demo/prettyprint.css'>
+
+	<style type='text/css'>
+		.faqs {
+			margin: 0;
+			padding: 0;
+		}
+
+		.faqs li {
+			position: relative;
+			display: block;
+			cursor: pointer;
+			padding: 0.5em 0.5em 0.5em 2.5em;
+			background-color: #f9f9f9;
+			margin: 0 0 0.2em 0;
+		}
+
+		.faqs strong:before {
+			content: '\25b6';
+			position: absolute;
+			left: 1em;
+			top: 0.8em;
+			font-size: 0.8em;
+			color: rgba(0,0,0,0.5);
+
+			-webkit-transition: all 0.2s ease-out;
+			-moz-transition: all 0.2s ease-out;
+			-ms-transition: all 0.2s ease-out;
+			-o-transition: all 0.2s ease-out;
+			transition: all 0.2s ease-out;
+		}
+
+		.faqs strong.expanded:before {
+			/*content: '\25bc';*/
+
+			-webkit-transform: rotate(90deg);
+		}
+
+		.faqs p {
+			background-color: rgba(255,255,255,0.8);
+			padding: 0.5em;
+			margin: 0.5em 0 0 0;
+			border: 1px solid rgba(0,0,0,0.1);
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- if the project is on GitHub, add a fork me button! -->
+	<a class='forkme' href='https://github.com/RactiveJS/Ractive-transitions-slide'>Fork me on GitHub</a>
+
+	<header>
+		<h1>Ractive-transitions-slide</h1>
+		<span>find more plugins at <a href='http://ractivejs.org/plugins'>ractivejs.org/plugins</a></span>
+	</header>
+
+	<main>
+		<p>This transition slides an element in and out of view, using CSS transitions where possible.</p>
+
+		<div id='demo'></div>
+
+		<pre id='demo-template-view' class='prettyprint lang-html'></pre>
+		<pre id='demo-code-view' class='prettyprint lang-js'></pre>
+	</main>
+
+	<!-- add additional info such as your homepage here, if you want -->
+	<footer>
+		<p>Copyright &copy; 2013 Rich Harris. Licensed MIT</p>
+	</footer>
+
+	<!-- Demo template -->
+	<script id='demo-template' type='text/ractive'>
+		<h2>Frequently asked questions</h2>
+
+		<ul class='faqs'>
+			{{#faqs}}
+				<li on-tap='toggle'>
+					<strong class='{{ expanded ? "expanded" : "collapsed" }}'>{{question}}</strong>
+					{{#expanded}}
+						<p intro='slide' outro='slide'>{{answer}}</p>
+					{{/expanded}}
+				</li>
+			{{/faqs}}
+		</ul>
+	</script>
+
+	<!-- Dependencies -->
+	<script src='lib/Ractive-legacy.js'></script>
+	<script src='Ractive-transitions-slide.js'></script>
+
+	<!-- Demo code -->
+	<script id='demo-code'>
+		ractive = new Ractive({
+			el: 'demo',
+			template: '#demo-template',
+			data: {
+				faqs: [
+					{
+						question: 'Why did Chuck Norris fail chemistry?',
+						answer: 'He only knew the element of surprise.'
+					},
+					{
+						question: 'How much wood would a woodchuck chuck if a woodchuck could chuck wood?',
+						answer: 'A woodchuck would chuck all the wood he could if a woodchuck could chuck wood.'
+					},
+					{
+						question: 'What word is shorter when you add two letters to it?',
+						answer: 'Short.'
+					}
+				]
+			}
+		});
+
+		ractive.on( 'toggle', function ( event ) {
+			this.toggle( event.keypath + '.expanded' );
+		});
+	</script>
+
+	<!-- Insert code into the page -->
+	<script src='demo/prettify.js'></script>
+	<script src='demo/demo.js'></script>
+</body>
+</html>
