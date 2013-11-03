@@ -40,9 +40,16 @@
 		}
 
 		.faqs strong.expanded:before {
-			/*content: '\25bc';*/
+			content: '\25bc';
+		}
 
+		.transforms-enabled .faqs strong.expanded:before {
+			content: '\25b6';
 			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			-o-transform: rotate(90deg);
+			transform: rotate(90deg);
 		}
 
 		.faqs p {
