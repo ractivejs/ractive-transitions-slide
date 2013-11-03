@@ -57,7 +57,7 @@
 	}
 
 	else {
-		throw new Error( 'Could not find Ractive! It must be loaded before the Ractive-transitions-fly plugin' );
+		throw new Error( 'Could not find Ractive! It must be loaded before the Ractive-transitions-slide plugin' );
 	}
 
 }( typeof window !== 'undefined' ? window : this, function ( Ractive ) {
