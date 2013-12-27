@@ -98,7 +98,7 @@
 				<li on-tap='toggle'>
 					<strong class='{{ expanded ? "expanded" : "collapsed" }}'>{{question}}</strong>
 					{{#expanded}}
-						<p intro='slide' outro='slide'>{{answer}}</p>
+						<p intro-outro='slide'>{{answer}}</p>
 					{{/expanded}}
 				</li>
 			{{/faqs}}
@@ -107,6 +107,7 @@
 
 	<!-- Dependencies -->
 	<script src='lib/Ractive-legacy.js'></script>
+	<script src='lib/Ractive-events-tap.js'></script>
 	<script src='Ractive-transitions-slide.js'></script>
 
 	<!-- Demo code -->

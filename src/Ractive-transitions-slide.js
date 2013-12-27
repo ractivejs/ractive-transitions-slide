@@ -68,7 +68,7 @@
 
 	defaults = {
 		duration: 300,
-		easing: 'linear'
+		easing: 'easeInOut'
 	};
 
 	props = [
@@ -91,32 +91,23 @@
 		marginBottom: 0
 	};
 
-	slide = function ( t ) {
-		var target;
+	slide = function ( t, params ) {
+		var targetStyle;
+
+		params = t.processParams( params, defaults );
 
 		if ( t.isIntro ) {
-			target = t.getStyle( props );
+			targetStyle = t.getStyle( props );
 			t.setStyle( collapsed );
 		} else {
 			// make style explicit, so we're not transitioning to 'auto'
 			t.setStyle( t.getStyle( props ) );
-			target = collapsed;
+			targetStyle = collapsed;
 		}
 
-		t.setStyle({ overflowY: 'hidden' });
+		t.setStyle( 'overflowY', 'hidden' );
 
-		// set defaults
-		if ( t.duration === undefined ) {
-			t.duration = 400;
-		}
-
-		if ( t.easing === undefined ) {
-			t.easing = 'easeInOut';
-		}
-
-		setTimeout( function () {
-			t.animateStyle( target );
-		}, t.delay || 0 );
+		t.animateStyle( targetStyle, params, t.complete );
 	};
 
 	Ractive.transitions.slide = slide;
