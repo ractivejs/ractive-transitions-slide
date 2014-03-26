@@ -5,7 +5,7 @@ Ractive.js slide transition plugin
 
 This transition slides an element in and out of view, using CSS transitions where possible.
 
-[See the demo here.](http://ractivejs.github.io/Ractive-transitions-slide/)
+[See the demo here.](http://ractivejs.github.io/ractive-transitions-slide/)
 
 Usage
 -----
@@ -13,15 +13,15 @@ Usage
 Include this file on your page below Ractive, e.g:
 
 ```html
-<script src='lib/Ractive.js'></script>
-<script src='lib/Ractive-transitions-slide.js'></script>
+<script src='lib/ractive.js'></script>
+<script src='lib/ractive-transitions-slide.js'></script>
 ```
 
 Or, if you're using a module loader, require this module:
 
 ```js
 // requiring the plugin will 'activate' it - no need to use the return value
-require( 'Ractive-transitions-slide' );
+require( 'ractive-transitions-slide' );
 ```
 
 You can specify the `delay`, `duration` and `easing` properties using the conventional syntax:

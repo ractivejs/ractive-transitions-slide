@@ -1,5 +1,5 @@
-// Ractive-transitions-slide tests
-// =========================
+// ractive-transitions-slide tests
+// ===============================
 
 (function () {
 
