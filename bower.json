@@ -16,7 +16,7 @@
 		"*.json",
 		"Gruntfile.js",
 		"index.html",
-		"ractive-transitions-fade.min.js",
+		"ractive-transitions-slide.min.js",
 		"README.md"
 	]
 }
