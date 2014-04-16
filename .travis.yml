@@ -6,7 +6,7 @@ before_script:
 script: ./scripts/deploy-to-gh-pages.sh
 env:
   global:
-  - GH_REF: github.com/ractivejs/ractive-transitions-fade.git
+  - GH_REF: github.com/ractivejs/ractive-transitions-slide.git
   - secure: MplEOjhEYSM+yj3w925Opwwab0C96SY9FGGFfAC/Cc0zmP6lFRxF6bu5BaYIUhHI4Ql3N1ePB/zWjjghX6+MkLEkCMY3/5SEAHxo6DZrDFUDOth/aCxmqI68SAnmtekZdA1L25dvdGqCd1yeViZaZZpS02miPyNG7WtUDXQU8PI=
 branches:
   only:
