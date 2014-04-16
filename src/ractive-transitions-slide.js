@@ -107,7 +107,7 @@
 
 		t.setStyle( 'overflowY', 'hidden' );
 
-		t.animateStyle( targetStyle, params, t.complete );
+		t.animateStyle( targetStyle, params ).then( t.complete );
 	};
 
 	Ractive.transitions.slide = slide;
