@@ -24,6 +24,13 @@ Or, if you're using a module loader, require this module:
 require( 'ractive-transitions-slide' );
 ```
 
+To get `ractive-transitions-slide.min.js` you can:
+
+- Use CDN: `//cdn.jsdelivr.net/ractive.transitions-slide/latest/ractive-transitions-slide.min.js`.
+- Use bower: `$ bower i ractive-transitions-slide`.
+- [Download the latest release](https://github.com/ractivejs/ractive-transitions-slide/releases/).
+- Clone the repo: `$ git clone https://github.com/ractivejs/ractive-transitions-slide.git`.
+
 You can specify the `delay`, `duration` and `easing` properties using the conventional syntax:
 
 ```html
