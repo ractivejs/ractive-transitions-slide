@@ -2,15 +2,11 @@
 	"name": "ractive-transitions-slide",
 	"repo": "ractivejs/ractive-transitions-slide",
 	"description": "ractive-transitions-slide",
-	"version": "0.1.2",
+	"version": "0.2.0-edge",
 	"keywords": [],
-	"dependencies": {
-		"ractivejs/ractive": "~0.4.0"
-	},
-	"development": {},
 	"license": "MIT",
-	"main": "ractive-transitions-slide.js",
+	"main": "dist/ractive-transitions-slide.js",
 	"scripts": [
-		"ractive-transitions-slide.js"
+		"dist/ractive-transitions-slide.js"
 	]
 }

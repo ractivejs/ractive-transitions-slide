@@ -1,22 +1,14 @@
 {
 	"name": "ractive-transitions-slide",
-	"version": "0.1.2",
+	"version": "0.2.0-edge",
 	"author": "Rich Harris",
-	"main": "ractive-transitions-slide.js",
+	"main": "dist/ractive-transitions-slide.js",
 	"ignore": [
-		".git/",
 		".*",
-		"demo/",
-		"grunt/",
-		"lib/",
-		"scripts/",
-		"src/",
-		"test/",
-		".gitignore",
 		"*.json",
-		"Gruntfile.js",
-		"index.html",
-		"ractive-transitions-slide.min.js",
-		"README.md"
+		"node_modules",
+		"demo",
+		"scripts",
+		"test"
 	]
 }
