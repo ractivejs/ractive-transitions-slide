@@ -20,7 +20,8 @@
 		paddingBottom: 0,
 		marginTop: 0,
 		marginBottom: 0
-	};function slide(t, params) {
+	};
+	function slide(t, params) {
 		var targetStyle;
 
 		params = t.processParams(params, DEFAULTS);

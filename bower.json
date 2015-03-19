@@ -1,6 +1,6 @@
 {
 	"name": "ractive-transitions-slide",
-	"version": "0.2.0-edge",
+	"version": "0.2.0",
 	"author": "Rich Harris",
 	"main": "dist/ractive-transitions-slide.js",
 	"ignore": [

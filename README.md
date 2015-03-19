@@ -1,37 +1,102 @@
-Ractive.js slide transition plugin
-==================================
+# ractive-transitions-slide
 
 *Find more Ractive.js plugins at [ractivejs.org/plugins](http://ractivejs.org/plugins)*
 
 This transition slides an element in and out of view, using CSS transitions where possible.
 
-[See the demo here.](http://ractivejs.github.io/ractive-transitions-slide/)
+```html
+{{#if visible}}
+  <div intro-outro='slide'>
+    this will slide in and out of view
+    depending on the value of `visible`
+  </div>
+{{/if}}
+```
 
-Usage
------
+## Installation
 
-Include this file on your page below Ractive, e.g:
+Install from npm...
+
+```bash
+npm install ractive-transitions-slide
+```
+
+...or download it and add it as a script tag to your page:
 
 ```html
-<script src='lib/ractive.js'></script>
-<script src='lib/ractive-transitions-slide.js'></script>
+<script src='ractive.js'></script> <!-- must go first! -->
+<script src='ractive-transitions-slide.js'></script>
 ```
 
-Or, if you're using a module loader, require this module:
+## Use as a module...
+
+**Note: previous versions of this plugin would 'self-register'. If you are using a module system such as Browserify, Webpack or RequireJS, that's no longer the case - you must explicitly register the plugin.
+
+
+### CommonJS
 
 ```js
-// requiring the plugin will 'activate' it - no need to use the return value
-require( 'ractive-transitions-slide' );
+var Ractive = require( 'ractive' );
+
+// To use the slide transition with a specific instance
+var ractive = new Ractive({
+  el: 'body',
+  template: myTemplate,
+  transitions: {
+    slide: require( 'ractive-transitions-slide' )
+  }
+});
+
+// To use it with components
+MyTappableComponent = Ractive.extend({
+  template: componentTemplate,
+  transitions: {
+    slide: require( 'ractive-transitions-slide' )
+  }
+});
+
+// To make it globally available to *all* instances
+Ractive.transitions.slide = require( 'ractive-transitions-slide' );
 ```
 
-To get `ractive-transitions-slide.min.js` you can:
 
-- Use CDN: `//cdn.jsdelivr.net/ractive.transitions-slide/latest/ractive-transitions-slide.min.js`.
-- Use bower: `$ bower i ractive-transitions-slide`.
-- [Download the latest release](https://github.com/ractivejs/ractive-transitions-slide/releases/).
-- Clone the repo: `$ git clone https://github.com/ractivejs/ractive-transitions-slide.git`.
+### AMD
 
-You can specify the `delay`, `duration` and `easing` properties using the conventional syntax:
+```js
+define([ 'ractive', 'ractive-transitions-slide' ], function ( Ractive, slide ) {
+  var ractive = new Ractive({
+    el: 'body',
+    template: myTemplate,
+    transitions: {
+      slide: slide
+    }
+  });
+});
+```
+
+
+### ES6
+
+```js
+import Ractive from 'ractive';
+
+var ractive = new Ractive({
+  el: 'body',
+  template: myTemplate,
+  transitions: { slide }
+});
+```
+
+
+## Use as a `<script>` tag
+
+If you include ractive-transitions-slide as a script tag, it will 'self-register' with the global `Ractive` object, and all Ractive instances will be able to use it.
+
+
+
+## Parameters
+
+You can specify the `delay`, `duration` and `easing` parameters using the conventional syntax:
 
 ```html
 <div intro='slide:{"delay":500,"easing":"ease-out"}'>content</div>
@@ -41,9 +106,6 @@ Both `delay` and `duration` are in milliseconds. The `easing` value must be a va
 
 
 
-License
--------
+## License
 
-Copyright (c) 2013 Rich Harris. Licensed MIT.
-
-Created with the [Ractive.js plugin template](https://github.com/RactiveJS/Plugin-template) for Grunt.
+Copyright (c) 2013-15 Rich Harris. Licensed MIT.
