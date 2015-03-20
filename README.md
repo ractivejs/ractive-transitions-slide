@@ -48,7 +48,7 @@ var ractive = new Ractive({
 });
 
 // To use it with components
-MyTappableComponent = Ractive.extend({
+MyComponent = Ractive.extend({
   template: componentTemplate,
   transitions: {
     slide: require( 'ractive-transitions-slide' )
