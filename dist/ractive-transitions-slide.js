@@ -1,16 +1,15 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 	typeof define === 'function' && define.amd ? define(factory) :
-	global.Ractive.transitions.slide = factory()
+	global.Ractive.transitions.slide = factory();
 }(this, function () { 'use strict';
 
-	var ractive_transitions_slide = slide;
 	var DEFAULTS = {
 		duration: 300,
-		easing: "easeInOut"
+		easing: 'easeInOut'
 	};
 
-	var PROPS = ["height", "borderTopWidth", "borderBottomWidth", "paddingTop", "paddingBottom", "marginTop", "marginBottom"];
+	var PROPS = ['height', 'borderTopWidth', 'borderBottomWidth', 'paddingTop', 'paddingBottom', 'marginTop', 'marginBottom'];
 
 	var COLLAPSED = {
 		height: 0,
@@ -35,11 +34,11 @@
 			targetStyle = COLLAPSED;
 		}
 
-		t.setStyle("overflowY", "hidden");
+		t.setStyle('overflowY', 'hidden');
 
 		t.animateStyle(targetStyle, params).then(t.complete);
 	}
 
-	return ractive_transitions_slide;
+	return slide;
 
 }));
