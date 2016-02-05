@@ -1,5 +1,9 @@
 # changelog
 
+## 0.4.0
+
+* Compile ES build before distribution
+
 ## 0.3.0
 
 * Simplify build
