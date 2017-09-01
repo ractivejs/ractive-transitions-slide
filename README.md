@@ -15,7 +15,13 @@ This transition slides an element in and out of view, using CSS transitions wher
 
 ## Installation
 
-Install from npm...
+Include it from CDN...
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/ractive@0.9.3/ractive.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ractive-transitions-slide@0.4.0/dist/ractive-transitions-slide.umd.min.js"></script>
+```
+...or install from npm...
 
 ```bash
 npm install ractive-transitions-slide
