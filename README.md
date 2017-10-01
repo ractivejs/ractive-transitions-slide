@@ -1,6 +1,6 @@
 # ractive-transitions-slide
 
-*Find more Ractive.js plugins at [ractivejs.org/plugins](http://ractivejs.org/plugins)*
+*Find more Ractive.js plugins at [docs.ractivejs.org/latest/plugins](http://docs.ractivejs.org/latest/plugins)*
 
 This transition slides an element in and out of view, using CSS transitions where possible.
 
